@@ -29,7 +29,6 @@ const Navbar = () => {
         },
     ]
 
-   
 
     return (
         <div>
@@ -40,7 +39,7 @@ const Navbar = () => {
                         links.map((link => <Link className={`${pathName == link.path? "text-green-400" : ""}`} href={link.path} key={link.path}>{link.title}</Link>))
                     }
                 </ul>
-                <button className='font-bold bg-sky-300 rounded-md p-2'><Link href={'#'}>Login</Link></button>
+                <button className='font-bold bg-sky-300 rounded-md p-2'><Link href={'/login'}>Login</Link></button>
             </nav>
         </div>
     );

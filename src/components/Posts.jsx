@@ -10,7 +10,7 @@ const Posts = async() => {
            <div className='grid grid-cols-4 gap-6 shadow-md'> 
             {
                 posts?.map((post=>(
-                    <div className='bg-orange-400 rounded-md p-4'>
+                    <div className='bg-orange-400 rounded-md p-4' key={post.id}>
                         <h1>Name:{post.name}</h1>
                         <h1>Email:{post.email}</h1>
                         <h1>Address:{post.address.street}</h1>
