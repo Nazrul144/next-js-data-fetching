@@ -2,6 +2,14 @@
 import PostData from '@/getData/postData';
 import React from 'react';
 
+export async function generateMetadata({params}){
+    const posts = await PostData()
+    const singlePost = await posts.find((post=> post.id === Number(params.id)))
+    return {
+        title: `Post Details: ${singlePost.name}`
+    }
+}
+
 const DetailsPage = async({params}) => {
     const posts = await PostData()
     const singlePost = posts.find((post=> post.id === Number(params.id)))

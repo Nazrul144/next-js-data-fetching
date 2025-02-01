@@ -1,5 +1,11 @@
 import React from 'react';
 
+export const metadata = {
+    title: 'About',
+    keywords: ['About', 'About'],
+    description: 'This is about page'
+}
+
 const AboutPage = () => {
     return (
         <div>

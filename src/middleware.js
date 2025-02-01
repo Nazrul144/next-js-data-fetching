@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const user = false;
+const user = true;
 export function middleware(request){
     if(!user){
         return NextResponse.redirect(new URL('/login', request.url))
