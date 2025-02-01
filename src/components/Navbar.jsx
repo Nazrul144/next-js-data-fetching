@@ -27,6 +27,10 @@ const Navbar = () => {
             title:'Dashboard',
             path: '/dashboard'
         },
+        {
+            title:'Gallery',
+            path: '/gallery'
+        },
     ]
 
 
