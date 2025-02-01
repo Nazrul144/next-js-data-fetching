@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className='flex justify-between p-4'>
-                <h1 className='font-bold text-2xl text-purple-400'>Hero</h1>
+                <h1 className='font-bold text-2xl text-purple-400 '>Hero</h1>
                 <ul className='flex space-x-4 text-xl font-bold'>
                     {
                         links.map((link => <Link className={`${pathName == link.path? "text-green-400" : ""}`} href={link.path} key={link.path}>{link.title}</Link>))
