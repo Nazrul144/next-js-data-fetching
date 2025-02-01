@@ -6,10 +6,19 @@ export const metadata = {
     description: 'This is about page'
 }
 
-const AboutPage = () => {
+const getTime = async()=>{
+    const res = await fetch('http://localhost:3000/time',{next: {revalidate:5}}) //After 5 second the time will be updated by refreshing.
+    const data = await res.json()
+    return data.currentTime
+}
+
+
+const AboutPage = async() => {
+    const currentTime = getTime();
     return (
-        <div>
+        <div className='h-screen'>
             <h1>This is about page</h1>
+            <h1 className='font-bold text-4xl text-center mt-56 text-purple-400'>Current Time:{currentTime}</h1>
         </div>
     );
 }
