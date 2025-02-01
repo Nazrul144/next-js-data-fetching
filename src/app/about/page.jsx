@@ -8,7 +8,7 @@ export const metadata = {
 
 const getTime = async()=>{
     // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`,${next: {revalidate:5}})
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/time`, { next: { revalidate: 5 } }); //After 5 second the time will be updated by refreshing.
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URLS}/time`, { next: { revalidate: 5 } }); //After 5 second the time will be updated by refreshing.
     const data = await res.json()
     return data.currentTime
 }
