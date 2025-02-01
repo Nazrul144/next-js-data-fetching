@@ -6,7 +6,8 @@ export async function generateMetadata({params}){
     const posts = await PostData()
     const singlePost = await posts.find((post=> post.id === Number(params.id)))
     return {
-        title: `Post Details: ${singlePost.name}`
+        title: `${singlePost.name}`,
+        description: singlePost.username
     }
 }
 
